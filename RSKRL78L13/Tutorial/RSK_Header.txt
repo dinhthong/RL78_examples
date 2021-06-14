@@ -1,0 +1,119 @@
+***********************************************************************************************************
+DESCRIPTION        Renesas Starter Kit Project Readme File    
+***********************************************************************************************************
+
+/**********************************************************************************************************
+* History         : 07.10.2013 Ver. 1.00 First Release
+**********************************************************************************************************/
+
+This project can be debugged with CubeSuite+ and an E1.
+
+The Quick Start Guide supplied with the RSK can be referred to for help in
+connecting to the target. 
+
+Online Support and Technical Contact Details:
+    Please refer to the contact details within the Quick Start Guide.
+
+/*    RSKRL78L13 - Board Connector Cross-Reference    */
+Device = R5F10WMG
+
+***********************************************************************************************************    
+PORT        PIN NAME/           RING                    COMMON              Application 
+NUMBER      FUNCTION            BUS PIN                 PIN                 Header
+***********************************************************************************************************        
+---         VDD                 J1-18                   ---                 ---
+                    
+---         VSS                 J1-13, J1-14            JA1-2, JA2-4,       JA4-5, JA4-6
+                                                        J6-24 
+
+---         RESETn              J1-10                   JA2-1               ---
+---         REGC                ---                     ---                 ---
+
+P00         LINTXD_SO00_TXD0    J4-4                    JA2-6               ---
+P01         INTP5               J4-3                    JA5-9               ---
+P02         INTP7               J4-2                    JA5-10              ---
+P03         RXD2                J4-1                    JA6-7               ---
+P04         TXD2                J3-20                   JA6-8               ---
+P05         LED0                J3-19                   ---                 ---
+P06         IO6_DLCDE           J3-18                   JA1-21              ---
+P07         SEG6_SO01           J3-17                   JA1-22              ---
+
+P10         SEG35_ANI22         J4-12                   JA5-3               JA4-46
+P11         SEG36_ANI23         J4-11                   JA5-4               JA4-47
+P12         SEG37               J4-10                   ---                 JA4-48
+P13         SEG38               J4-9                    ---                 JA4-49
+P14         SEG39_TO04          J4-8                    JA2-20              JA4-50
+P15         LED2                J4-7                    ---                 ---
+P16         LINNSLP_SCK00n      J4-6                    JA2-10              ---
+P17         LINRXD_SI00_RXD0    J4-5                    JA2-8               ---
+
+P20         ANI1_AVREFM         J4-20                   JA1-6               ---
+P21         ANI0_AVREFP         J4-19                   JA1-7               ---
+P22         SEG29_ANI16         J4-18                   JA1-9               JA4-40
+P23         SEG30_ANI17         J4-17                   JA1-10              JA4-41
+P24         SEG31_ANI18         J4-16                   JA1-11              JA4-42
+P25         SEG32_ANI19         J4-15                   JA1-12              JA4-43
+P26         SEG33_ANI20         J4-14                   JA5-1               JA4-44
+P27         SEG34_ANI21         J4-13                   JA5-2               JA4-45
+
+P30         IO0_SEG20           J2-12                   JA1-15              JA4-31
+P31         IO1_SEG21           J2-11                   JA1-16              JA4-32
+P32         IO2_SEG22           J2-10                   JA1-17              JA4-33
+P33         IO3_SEG23           J2-9                    JA1-18              JA4-34
+P34         IO4_SEG24_INTP4     J2-8                    JA1-19              JA4-35
+P35         IO5_SEG25           J2-7                    JA1-20              JA4-36
+
+P40         TOOL0               J1-9                    ---                 ---
+P41         LED3_TI07           J1-8                    JA2-22              ---
+P42         SO10_TXD1           J1-7                    JA6-9               ---
+P43         SI10_RXD1_IVCMP1    J1-6, J4-34             JA6-12              ---
+P44         SCK10n_IVCMP0       J1-5, J4-33             JA6-11              ---
+P45         LED1                J1-4                    ---                 ---
+P46         SEG26               J1-3                    ---                 JA4-37
+P47         SEG27               J1-2                    ---                 JA4-38
+
+P50         SEG4                J3-8                    ---                 JA4-15
+P51         SEG5                J3-7                    ---                 JA4-16
+P52         SEG6_INTP1          J3-6, J4-24             JA2-9               JA4-17
+P53         SEG7_INTP2          J3-5, J4-25             JA2-23              JA4-18
+P54         SEG8                J3-4                    ---                 JA4-19
+P55         SEG9                J3-3                    ---                 JA4-20
+P56         SEG10               J3-2                    ---                 JA4-21
+P57         SEG11               J3-1                    ---                 JA4-22
+
+P60         TO01_SCLA0          J1-19                   JA1-26, JA2-19      ---
+P61         TI02_SDAA0          J1-20                   JA1-25, JA2-21      ---
+
+P70         DLCDD4_SEG12        J2-20                   ---                 JA4-23
+P71         DLCDD5_SEG13        J2-19                   ---                 JA4-24
+P72         DLCDD6_SEG14        J2-18                   ---                 JA4-25
+P73         DLCDD7_SEG15        J2-17                   ---                 JA4-26
+P74         SEG16_TKBO00        J2-16, J4-27            ---                 JA4-27
+P75         SEG17_TKBO01-2      J2-15, J4-30            ---                 JA4-28
+P76         SEG18_TKBO01-1      J2-14, J4-29            ---                 JA4-29
+P77         SEG19_TKBO01-0      J2-13, J4-28            ---                 JA4-30
+
+P121        P121                ---                     ---                 ---
+P122        P122                ---                     ---                 ---
+P123        P123                ---                     ---                 ---
+P124        P124                ---                     ---                 ---
+P125        VL3                 J2-6                    ---                 JA4-2
+P126        CAPL                J2-2                    ---                 ---
+P127        CAPH                J2-1                    ---                 ---
+
+P130        SEG28               J1-1                    ---                 JA4-39
+P137        INTP0               J1-13                   JA2-7               ---
+
+SEG3        SEG3                J3-9                    ---                JA4-14
+SEG2        SEG2                J3-10                   ---                JA4-13
+SEG1        SEG1                J3-11                   ---                JA4-12
+SEG0        SEG0                J3-12                   ---                JA4-11
+COM3        COM3                J3-13                   ---                JA4-10
+COM2        COM2                J3-14                   ---                JA4-9
+COM1        COM1                J3-15                   ---                JA4-8
+COM0        COM0                J3-16                   ---                JA4-7
+
+VL4         VL4                 J2-5                    ---                JA4-1
+VL2         VL2                 J2-3                    ---                JA4-3
+VL1         VL1                 J2-4                    ---                JA4-4
+

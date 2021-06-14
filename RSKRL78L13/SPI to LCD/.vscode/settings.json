@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "glcd128x64.h": "c",
+        "r_cg_macrodriver.h": "c"
+    }
+}

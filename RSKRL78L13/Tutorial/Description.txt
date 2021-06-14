@@ -1,0 +1,19 @@
+Follow Renesas Starter Kit for RL78/L13 Qick Start Guide
+https://www.renesas.com/us/en/document/man/cubesuite-renesas-starter-kit-rl78l13-quick-start-guide?r=1168601
+   
+* Instructions : 
+*             1. Compile and download the sample code to the target.
+*                Click the 'Go' button to start program execution.
+*
+*             2. All segments on the LCD panel will begin to flash. press the SW1, SW2 or SW3 buttons 
+*                to proceed. (The program will proceed automatically after 200 flashes).
+*   
+*             3. The real time clock will be displayed with HH:MM on top line and seconds
+*                on the middle line. The time will start from 12:30:00.  
+* 
+*             4. A heart symbol and the LEDs will flash at a rate varied by the potentiometer RV1.
+*
+*             5. The string 'L13' will slowly replace the word 'RL78' on
+*                the alpha-numeric LCD segments...
+*
+

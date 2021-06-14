@@ -1,0 +1,92 @@
+/***********************************************************************************************************************
+* DISCLAIMER
+* This software is supplied by Renesas Electronics Corporation and is only 
+* intended for use with Renesas products. No other uses are authorized. This 
+* software is owned by Renesas Electronics Corporation and is protected under 
+* all applicable laws, including copyright laws.
+* THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES REGARDING 
+* THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING BUT NOT 
+* LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE 
+* AND NON-INFRINGEMENT. ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.
+* TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER RENESAS 
+* ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE 
+* FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR 
+* ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AFFILIATES HAVE 
+* BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+* Renesas reserves the right, without notice, to make changes to this software 
+* and to discontinue the availability of this software. By using this software, 
+* you agree to the additional terms and conditions found by accessing the 
+* following link:
+* http://www.renesas.com/disclaimer
+*
+* Copyright (C) 2013 Renesas Electronics Corporation. All rights reserved.
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+* File Name    : Description.txt
+* Version      : Applilet4 for RL78/L13 V1.00.00.02 [10 May 2013]
+* Device(s)    : R5F10WMG
+* Tool-Chain   : CA78K0R
+* H/W Platform : RSKRL78L13
+* Note         : Application Leading Tool (Applilet) is used to generate code 
+*                for this sample program.  The name Applilet is used hereafter.
+*                The Applilet details and version number are given in the file 
+*                header for each relevant module.
+* Description  : Demonstrates usage of the IIC interface in master mode, by reading and 
+*                writing to an EEPROM device. 
+*
+* Option Bytes : Option bytes for the microcontroller are set in the CubeSuite+ IDE. Select the build tool in the 
+*                project tree window, click the link options tab and open the "Device" section. 
+*                The default option byte value is 0xEFFFF0
+*          
+*                Works with the Renesas R1EX24xxx series, 16Kbit EEPROM and 
+*                compatible devices. The EEPROM device should be in a circuit
+*                recommended by the manufacturer to ensure it is operational. 
+*                Alternately, the project can be configured to work with another 
+*                RSKRL78L13 running the slave program. The user can select the 
+*                appropriate slave device by the inclusion or exclusion of the 
+*                macro definition '#define SLAVE_RL78L13', which is found in the 
+*                r_cg_userdefine.h header file.  By default this sample is configured
+*                to work with the EEPROM device,
+*                
+* Modifications: The IIC pull-up resistors are connected to Board_VDD by default.
+*                This is correct for power configurations where Board_VDD is 5V.
+*                For power configurations where Board_VDD is 3.3V, the IIC pull-up resistors
+*                should be connected to Board_5V, by removing R5 and fitting R6.
+*                
+*                Please refer to the schematics document and component placement 
+*                diagram in the User Manual to help locate components. 
+*                
+* Instructions : 1. Connect a compatible EEPROM memory device as follows:
+*
+*                   EEPROM  |   RSK
+*                   -------------------------------            
+*                   SDA    ->   SDA (JA1, pin 25)
+*                   SCL    ->   SCL (JA1, pin 26)
+*                   GND    ->   Any ground point.
+*
+*                   (Ensure the device is powered as its datasheet specifies)
+*        
+*                 2. Build and download the sample code to the RSK.
+*
+*                 3. Click the 'Go' button to start program execution. "IICM" will be displayed on the
+*                    bottom line of the LCD.
+*                   
+*                 4. Press switch SW1 to perform a write operation. If the write is successful,
+*                    the LCD displays show the data sent to the EEPROM, address location 0, in the
+*                    middle line in the first character location of the LCD. 'M-WR' is also shown
+*                    in the bottom line of the LCD.
+*                    
+*                 5. Press switch SW3 to perform a read operation. The read data will be compared to the
+*                    the data written in step 4, and the result will be displayed in the
+*                    middle line in the third character location of the LCD. 'M-RD' is also shown
+*                    in the bottom line of the LCD.
+*
+* Note:          If the IIC slave becomes unresponsive, stop the sample and disconnect power to the RSK,
+*                recheck the EEPROM connections, then reconnect power and start from step 1 again. 
+*                An error message will be displayed on the LCD if a read operation is performed as the first operation.
+*                   
+***********************************************************************************************************************/
+/***********************************************************************************************************************
+* History      : 16th Oct 2013 Ver. 1.00 First Release
+***********************************************************************************************************************/
