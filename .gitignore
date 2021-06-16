@@ -6,6 +6,8 @@
 #for MDK-ARM IDE generated user files 
 *.uvgui*
 *.o*
-*.d*
+*.d
 *.crf*
 *.mtud
+*.clang-format
+**/.vscode

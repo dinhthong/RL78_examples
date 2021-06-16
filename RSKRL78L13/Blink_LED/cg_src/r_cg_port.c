@@ -67,10 +67,17 @@ void R_PORT_Create(void)
     PFSEG4 = 0;
     PFSEG5 = 0;
     PFSEG6 = 0xFF;
-
+    /*
+      Renesas starter kit RL78/L13, on-board LEDs: LED0: P05, LED1: P45, LED2: P15, LED3: P41.
+      Configure Port 05 as output
+    */
     P0 = _20_Pn5_OUTPUT_1;
     P1 = _20_Pn5_OUTPUT_1;
     P4 = _02_Pn1_OUTPUT_1 | _20_Pn5_OUTPUT_1;
+    /*
+      port mode register
+      4.3.1 Port mode registers (PMxx)
+    */
     PM0 = _01_PMn0_NOT_USE | _02_PMn1_NOT_USE | _04_PMn2_NOT_USE | _08_PMn3_NOT_USE | _10_PMn4_NOT_USE | 
           _00_PMn5_MODE_OUTPUT | _40_PMn6_NOT_USE | _80_PMn7_NOT_USE;
     PM1 = _01_PMn0_NOT_USE | _02_PMn1_NOT_USE | _04_PMn2_NOT_USE | _08_PMn3_NOT_USE | _10_PMn4_NOT_USE | 
